@@ -1,0 +1,41 @@
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find hubo_control)/config/hubo_control.yaml" command="load"/>
+
+  <!-- load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+  output="screen" ns="/hubo_gazebo" args="joint_state_controller
+            HPY_position_controller
+            LHY_position_controller
+            LHR_position_controller
+            LHP_position_controller
+            LKP_position_controller
+            LAP_position_controller
+            LAR_position_controller
+            RHY_position_controller
+            RHR_position_controller
+            RHP_position_controller
+            RKP_position_controller
+            RAP_position_controller
+            RAR_position_controller
+            LSP_position_controller
+            LSR_position_controller
+            LSY_position_controller
+            LEP_position_controller
+            LWY_position_controller
+            LWP_position_controller
+            RSP_position_controller
+            RSR_position_controller
+            RSY_position_controller
+            REP_position_controller
+            RWY_position_controller
+            RWP_position_controller"/>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+  respawn="false" output="screen">
+    <remap from="/joint_states" to="/hubo/joint_states" />
+  </node>
+
+</launch>

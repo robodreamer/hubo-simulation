@@ -1,0 +1,173 @@
+digraph G {
+node [shape=box];
+"Body_Torso" [label="Body_Torso"];
+"Body_HNP" [label="Body_HNP"];
+"Body_Hip" [label="Body_Hip"];
+"Body_LHY" [label="Body_LHY"];
+"Body_LHR" [label="Body_LHR"];
+"Body_LHP" [label="Body_LHP"];
+"Body_LKP" [label="Body_LKP"];
+"Body_LAP" [label="Body_LAP"];
+"Body_LAR" [label="Body_LAR"];
+"Body_RHY" [label="Body_RHY"];
+"Body_RHR" [label="Body_RHR"];
+"Body_RHP" [label="Body_RHP"];
+"Body_RKP" [label="Body_RKP"];
+"Body_RAP" [label="Body_RAP"];
+"Body_RAR" [label="Body_RAR"];
+"Body_LSP" [label="Body_LSP"];
+"Body_LSR" [label="Body_LSR"];
+"Body_LSY" [label="Body_LSY"];
+"Body_LEP" [label="Body_LEP"];
+"Body_LWY" [label="Body_LWY"];
+"Body_LWP" [label="Body_LWP"];
+"leftIndexProximal" [label="leftIndexProximal"];
+"leftIndexMedial" [label="leftIndexMedial"];
+"leftIndexDistal" [label="leftIndexDistal"];
+"leftMiddleProximal" [label="leftMiddleProximal"];
+"leftMiddleMedial" [label="leftMiddleMedial"];
+"leftMiddleDistal" [label="leftMiddleDistal"];
+"leftPinkyProximal" [label="leftPinkyProximal"];
+"leftPinkyMedial" [label="leftPinkyMedial"];
+"leftPinkyDistal" [label="leftPinkyDistal"];
+"leftRingProximal" [label="leftRingProximal"];
+"leftRingMedial" [label="leftRingMedial"];
+"leftRingDistal" [label="leftRingDistal"];
+"leftThumbProximal" [label="leftThumbProximal"];
+"leftThumbMedial" [label="leftThumbMedial"];
+"leftThumbDistal" [label="leftThumbDistal"];
+"Body_RSP" [label="Body_RSP"];
+"Body_RSR" [label="Body_RSR"];
+"Body_RSY" [label="Body_RSY"];
+"Body_REP" [label="Body_REP"];
+"Body_RWY" [label="Body_RWY"];
+"Body_RWP" [label="Body_RWP"];
+"rightIndexProximal" [label="rightIndexProximal"];
+"rightIndexMedial" [label="rightIndexMedial"];
+"rightIndexDistal" [label="rightIndexDistal"];
+"rightMiddleProximal" [label="rightMiddleProximal"];
+"rightMiddleMedial" [label="rightMiddleMedial"];
+"rightMiddleDistal" [label="rightMiddleDistal"];
+"rightPinkyProximal" [label="rightPinkyProximal"];
+"rightPinkyMedial" [label="rightPinkyMedial"];
+"rightPinkyDistal" [label="rightPinkyDistal"];
+"rightRingProximal" [label="rightRingProximal"];
+"rightRingMedial" [label="rightRingMedial"];
+"rightRingDistal" [label="rightRingDistal"];
+"rightThumbProximal" [label="rightThumbProximal"];
+"rightThumbMedial" [label="rightThumbMedial"];
+"rightThumbDistal" [label="rightThumbDistal"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"Body_Torso" -> "HNP" [label="xyz: 0.0122581 0.0024526 0.196935 \nrpy: 0 -0 0"]
+"HNP" -> "Body_HNP"
+"Body_Torso" -> "HPY" [label="xyz: 0.0122662 0.00245974 -0.15262 \nrpy: 0 -0 0"]
+"HPY" -> "Body_Hip"
+"Body_Hip" -> "LHY" [label="xyz: 0.000125136 0.0885155 -0.0764689 \nrpy: 0 -0 0"]
+"LHY" -> "Body_LHY"
+"Body_LHY" -> "LHR" [label="xyz: 0.0520001 1.50498e-06 -0.091004 \nrpy: 0 -0 0"]
+"LHR" -> "Body_LHR"
+"Body_LHR" -> "LHP" [label="xyz: -0.0529074 0.0655748 9.99159e-05 \nrpy: 0 -0 0"]
+"LHP" -> "Body_LHP"
+"Body_LHP" -> "LKP" [label="xyz: 0.000766364 -0.0445011 -0.280007 \nrpy: 0 -0 0"]
+"LKP" -> "Body_LKP"
+"Body_LKP" -> "LAP" [label="xyz: 7.20248e-06 0.0247555 -0.279942 \nrpy: 0 -0 0"]
+"LAP" -> "Body_LAP"
+"Body_LAP" -> "LAR" [label="xyz: 0.0711787 -0.0466006 -1.04e-10 \nrpy: 0 -0 0"]
+"LAR" -> "Body_LAR"
+"Body_Hip" -> "RHY" [label="xyz: 0.000125136 -0.0884999 -0.0764689 \nrpy: 0 -0 0"]
+"RHY" -> "Body_RHY"
+"Body_RHY" -> "RHR" [label="xyz: 0.0520001 7.3455e-05 -0.091004 \nrpy: 0 -0 0"]
+"RHR" -> "Body_RHR"
+"Body_RHR" -> "RHP" [label="xyz: -0.0529074 -0.0655748 9.99159e-05 \nrpy: 0 -0 0"]
+"RHP" -> "Body_RHP"
+"Body_RHP" -> "RKP" [label="xyz: 0.000766364 0.0445011 -0.280007 \nrpy: 0 -0 0"]
+"RKP" -> "Body_RKP"
+"Body_RKP" -> "RAP" [label="xyz: 7.20248e-06 -0.0247555 -0.279942 \nrpy: 0 -0 0"]
+"RAP" -> "Body_RAP"
+"Body_RAP" -> "RAR" [label="xyz: 0.0711787 0.0466006 -1.04e-10 \nrpy: 0 -0 0"]
+"RAR" -> "Body_RAR"
+"Body_Torso" -> "LSP" [label="xyz: 0.0122581 0.143973 0.0486356 \nrpy: 0 -0 0"]
+"LSP" -> "Body_LSP"
+"Body_LSP" -> "LSR" [label="xyz: 0.0269 0.072 0 \nrpy: 0 -0 0"]
+"LSR" -> "Body_LSR"
+"Body_LSR" -> "LSY" [label="xyz: -0.0269 -0.000166249 -0.0245 \nrpy: 0 -0 0"]
+"LSY" -> "Body_LSY"
+"Body_LSY" -> "LEP" [label="xyz: 0.0219936 -0.018 -0.157505 \nrpy: 0 -0 0"]
+"LEP" -> "Body_LEP"
+"Body_LEP" -> "LWY" [label="xyz: -0.0219906 0.018 -0.111408 \nrpy: 0 -0 0"]
+"LWY" -> "Body_LWY"
+"Body_LWY" -> "LWP" [label="xyz: 1.72973e-06 -0.00872953 -0.05255 \nrpy: 0 -0 0"]
+"LWP" -> "Body_LWP"
+"Body_LWP" -> "leftIndexKnuckle1" [label="xyz: 0.0289159 0.0298617 -0.088883 \nrpy: 1.5708 0.785398 1.5708"]
+"leftIndexKnuckle1" -> "leftIndexProximal"
+"leftIndexProximal" -> "Knuckle221" [label="xyz: 0.032 0 0 \nrpy: 0 -0 0"]
+"Knuckle221" -> "leftIndexMedial"
+"leftIndexMedial" -> "Knuckle322" [label="xyz: 0.022 0 0 \nrpy: 0 -0 0"]
+"Knuckle322" -> "leftIndexDistal"
+"Body_LWP" -> "leftMiddleKnuckle1" [label="xyz: 0.00993585 0.0298617 -0.088883 \nrpy: 1.5708 0.785398 1.5708"]
+"leftMiddleKnuckle1" -> "leftMiddleProximal"
+"leftMiddleProximal" -> "Knuckle218" [label="xyz: 0.032 0 0 \nrpy: 0 -0 0"]
+"Knuckle218" -> "leftMiddleMedial"
+"leftMiddleMedial" -> "Knuckle319" [label="xyz: 0.022 0 0 \nrpy: 0 -0 0"]
+"Knuckle319" -> "leftMiddleDistal"
+"Body_LWP" -> "leftPinkyKnuckle1" [label="xyz: -0.0281041 0.0298617 -0.088883 \nrpy: 1.5708 0.785398 1.5708"]
+"leftPinkyKnuckle1" -> "leftPinkyProximal"
+"leftPinkyProximal" -> "Knuckle212" [label="xyz: 0.032 0 0 \nrpy: 0 -0 0"]
+"Knuckle212" -> "leftPinkyMedial"
+"leftPinkyMedial" -> "Knuckle313" [label="xyz: 0.022 0 0 \nrpy: 0 -0 0"]
+"Knuckle313" -> "leftPinkyDistal"
+"Body_LWP" -> "leftRingKnuckle1" [label="xyz: -0.00910415 0.0298617 -0.088883 \nrpy: 1.5708 0.785398 1.5708"]
+"leftRingKnuckle1" -> "leftRingProximal"
+"leftRingProximal" -> "Knuckle215" [label="xyz: 0.032 0 0 \nrpy: 0 -0 0"]
+"Knuckle215" -> "leftRingMedial"
+"leftRingMedial" -> "Knuckle316" [label="xyz: 0.022 0 0 \nrpy: 0 -0 0"]
+"Knuckle316" -> "leftRingDistal"
+"Body_LWP" -> "leftThumbKnuckle1" [label="xyz: 0.0208959 0.00192069 -0.060952 \nrpy: 1.5708 -0.785398 -1.5708"]
+"leftThumbKnuckle1" -> "leftThumbProximal"
+"leftThumbProximal" -> "Knuckle29" [label="xyz: 0.032 0 0 \nrpy: 0 -0 0"]
+"Knuckle29" -> "leftThumbMedial"
+"leftThumbMedial" -> "Knuckle310" [label="xyz: 0.022 0 0 \nrpy: 0 -0 0"]
+"Knuckle310" -> "leftThumbDistal"
+"Body_Torso" -> "RSP" [label="xyz: 0.0122581 -0.139027 0.0486356 \nrpy: 0 -0 0"]
+"RSP" -> "Body_RSP"
+"Body_RSP" -> "RSR" [label="xyz: 0.0269 -0.072 0 \nrpy: 0 -0 0"]
+"RSR" -> "Body_RSR"
+"Body_RSR" -> "RSY" [label="xyz: -0.0269 0 -0.0245 \nrpy: 0 -0 0"]
+"RSY" -> "Body_RSY"
+"Body_RSY" -> "REP" [label="xyz: 0.0219936 0.018 -0.157505 \nrpy: 0 -0 0"]
+"REP" -> "Body_REP"
+"Body_REP" -> "RWY" [label="xyz: -0.0219906 -0.018 -0.111408 \nrpy: 0 -0 0"]
+"RWY" -> "Body_RWY"
+"Body_RWY" -> "RWP" [label="xyz: 1.72973e-06 0.01 -0.05255 \nrpy: 0 -0 0"]
+"RWP" -> "Body_RWP"
+"Body_RWP" -> "rightIndexKnuckle1" [label="xyz: 0.0289159 -0.0298617 -0.088883 \nrpy: 1.5708 0.785398 -1.5708"]
+"rightIndexKnuckle1" -> "rightIndexProximal"
+"rightIndexProximal" -> "Knuckle2" [label="xyz: 0.032 0 0 \nrpy: 0 -0 0"]
+"Knuckle2" -> "rightIndexMedial"
+"rightIndexMedial" -> "Knuckle3" [label="xyz: 0.022 0 0 \nrpy: 0 -0 0"]
+"Knuckle3" -> "rightIndexDistal"
+"Body_RWP" -> "rightMiddleKnuckle1" [label="xyz: 0.00993585 -0.0298617 -0.088883 \nrpy: 1.5708 0.785398 -1.5708"]
+"rightMiddleKnuckle1" -> "rightMiddleProximal"
+"rightMiddleProximal" -> "Knuckle239" [label="xyz: 0.032 0 0 \nrpy: 0 -0 0"]
+"Knuckle239" -> "rightMiddleMedial"
+"rightMiddleMedial" -> "Knuckle340" [label="xyz: 0.022 0 0 \nrpy: 0 -0 0"]
+"Knuckle340" -> "rightMiddleDistal"
+"Body_RWP" -> "rightPinkyKnuckle1" [label="xyz: -0.0281041 -0.0298617 -0.088883 \nrpy: 1.5708 0.785398 -1.5708"]
+"rightPinkyKnuckle1" -> "rightPinkyProximal"
+"rightPinkyProximal" -> "Knuckle233" [label="xyz: 0.032 0 0 \nrpy: 0 -0 0"]
+"Knuckle233" -> "rightPinkyMedial"
+"rightPinkyMedial" -> "Knuckle334" [label="xyz: 0.022 0 0 \nrpy: 0 -0 0"]
+"Knuckle334" -> "rightPinkyDistal"
+"Body_RWP" -> "rightRingKnuckle1" [label="xyz: -0.00910415 -0.0298617 -0.088883 \nrpy: 1.5708 0.785398 -1.5708"]
+"rightRingKnuckle1" -> "rightRingProximal"
+"rightRingProximal" -> "Knuckle236" [label="xyz: 0.032 0 0 \nrpy: 0 -0 0"]
+"Knuckle236" -> "rightRingMedial"
+"rightRingMedial" -> "Knuckle337" [label="xyz: 0.022 0 0 \nrpy: 0 -0 0"]
+"Knuckle337" -> "rightRingDistal"
+"Body_RWP" -> "rightThumbKnuckle1" [label="xyz: 0.0208959 -0.00192069 -0.060952 \nrpy: 1.5708 -0.785398 1.5708"]
+"rightThumbKnuckle1" -> "rightThumbProximal"
+"rightThumbProximal" -> "Knuckle230" [label="xyz: 0.032 0 0 \nrpy: 0 -0 0"]
+"Knuckle230" -> "rightThumbMedial"
+"rightThumbMedial" -> "Knuckle331" [label="xyz: 0.022 0 0 \nrpy: 0 -0 0"]
+"Knuckle331" -> "rightThumbDistal"
+}

@@ -1,0 +1,4087 @@
+<sdf version='1.4'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+    </model>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+      <gravity>0 0 -9.8</gravity>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='huboplus_0'>
+      <link name='Body_Torso'>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>7.50334</mass>
+          <inertia>
+            <ixx>0.102019</ixx>
+            <ixy>2.45462e-05</ixy>
+            <ixz>0.00713022</ixz>
+            <iyy>0.0832724</iyy>
+            <iyz>-0.00131733</iyz>
+            <izz>0.086493</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_Torso_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_Torso_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_Torso_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_Torso_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <link name='Body_HNP'>
+        <pose>0.0122581 0.0024526 0.196935 0 -0 0</pose>
+        <inertial>
+          <pose>0.0106886 -3.00864e-05 0.032123 0 -0 0</pose>
+          <mass>0.374251</mass>
+          <inertia>
+            <ixx>0.00164033</ixx>
+            <ixy>-1.08171e-07</ixy>
+            <ixz>-9.53978e-05</ixz>
+            <iyy>0.00153943</iyy>
+            <iyz>1.25376e-06</iyz>
+            <izz>0.00190393</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_HNP_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_HNP_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_HNP_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_HNP_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='HNP' type='revolute'>
+        <child>Body_HNP</child>
+        <parent>Body_Torso</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-0.523599</lower>
+            <upper>0.523599</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_Hip'>
+        <pose>0.0122662 0.00245974 -0.15262 0 -0 0</pose>
+        <inertial>
+          <pose>-0.0138504 7.80652e-06 -0.0354613 0 -0 0</pose>
+          <mass>3.41719</mass>
+          <inertia>
+            <ixx>0.0180349</ixx>
+            <ixy>3.17531e-05</ixy>
+            <ixz>-0.000513489</ixz>
+            <iyy>0.00912382</iyy>
+            <iyz>-6.90617e-05</iyz>
+            <izz>0.0220514</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_Hip_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_Hip_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_Hip_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_Hip_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='HPY' type='revolute'>
+        <child>Body_Hip</child>
+        <parent>Body_Torso</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-3.14158</lower>
+            <upper>3.14158</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_LHY'>
+        <pose>0.0123913 0.0909752 -0.229089 0 -0 0</pose>
+        <inertial>
+          <pose>0.0347065 3.748e-05 -0.0726153 0 -0 0</pose>
+          <mass>0.826125</mass>
+          <inertia>
+            <ixx>0.00151818</ixx>
+            <ixy>2.13586e-06</ixy>
+            <ixz>0.000434128</ixz>
+            <iyy>0.00286333</iyy>
+            <iyz>-1.57525e-07</iyz>
+            <izz>0.00211437</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_LHY_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LHY_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_LHY_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LHY_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='LHY' type='revolute'>
+        <child>Body_LHY</child>
+        <parent>Body_Hip</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-1.5708</lower>
+            <upper>1.5708</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_LHR'>
+        <pose>0.0643914 0.0909767 -0.320093 0 -0 0</pose>
+        <inertial>
+          <pose>-0.0497479 0.0125311 -0.0156437 0 -0 0</pose>
+          <mass>1.93266</mass>
+          <inertia>
+            <ixx>0.00403487</ixx>
+            <ixy>7.9452e-05</ixy>
+            <ixz>-0.000125343</ixz>
+            <iyy>0.00332707</iyy>
+            <iyz>-0.000551964</iyz>
+            <izz>0.00317173</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_LHR_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LHR_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_LHR_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LHR_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='LHR' type='revolute'>
+        <child>Body_LHR</child>
+        <parent>Body_LHY</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-0.488692</lower>
+            <upper>0.488692</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_LHP'>
+        <pose>0.011484 0.156552 -0.319993 0 -0 0</pose>
+        <inertial>
+          <pose>0.0195049 -0.0595775 -0.175202 0 -0 0</pose>
+          <mass>2.8201</mass>
+          <inertia>
+            <ixx>0.0295102</ixx>
+            <ixy>0.000184399</ixy>
+            <ixz>-0.000370291</ixz>
+            <iyy>0.0273771</iyy>
+            <iyz>0.00065658</iyz>
+            <izz>0.00838035</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_LHP_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LHP_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_LHP_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LHP_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='LHP' type='revolute'>
+        <child>Body_LHP</child>
+        <parent>Body_LHR</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1.48353</lower>
+            <upper>1.6057</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_LKP'>
+        <pose>0.0122504 0.11205 -0.6 0 -0 0</pose>
+        <inertial>
+          <pose>0.0128254 -0.00727567 -0.171431 0 -0 0</pose>
+          <mass>1.80912</mass>
+          <inertia>
+            <ixx>0.0232156</ixx>
+            <ixy>0.000251648</ixy>
+            <ixz>-0.00129343</ixz>
+            <iyy>0.0208342</iyy>
+            <iyz>0.00278068</iyz>
+            <izz>0.0059204</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_LKP_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LKP_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_LKP_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LKP_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='LKP' type='revolute'>
+        <child>Body_LKP</child>
+        <parent>Body_LHP</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-0.0698132</lower>
+            <upper>2.60054</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_LAP'>
+        <pose>0.0122576 0.136806 -0.879942 0 -0 0</pose>
+        <inertial>
+          <pose>0.0198702 -0.0459693 0.0115069 0 -0 0</pose>
+          <mass>1.63501</mass>
+          <inertia>
+            <ixx>0.00231659</ixx>
+            <ixy>1.87402e-05</ixy>
+            <ixz>0.000369899</ixz>
+            <iyy>0.00330411</iyy>
+            <iyz>6.38153e-05</iyz>
+            <izz>0.00279495</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_LAP_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LAP_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_LAP_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LAP_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='LAP' type='revolute'>
+        <child>Body_LAP</child>
+        <parent>Body_LKP</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1.29154</lower>
+            <upper>1.69297</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_LAR'>
+        <pose>0.0834363 0.0902053 -0.879942 0 -0 0</pose>
+        <inertial>
+          <pose>-0.0515094 0.00216398 -0.0693881 0 -0 0</pose>
+          <mass>1.20318</mass>
+          <inertia>
+            <ixx>0.00295183</ixx>
+            <ixy>3.23211e-05</ixy>
+            <ixz>0.000141769</ixz>
+            <iyy>0.00524792</iyy>
+            <iyz>5.95404e-05</iyz>
+            <izz>0.00516817</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_LAR_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LAR_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_LAR_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LAR_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='LAR' type='revolute'>
+        <child>Body_LAR</child>
+        <parent>Body_LAP</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-0.191986</lower>
+            <upper>0.191986</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_RHY'>
+        <pose>0.0123913 -0.0860402 -0.229089 0 -0 0</pose>
+        <inertial>
+          <pose>0.0347065 -3.748e-05 -0.0726153 0 -0 0</pose>
+          <mass>0.826125</mass>
+          <inertia>
+            <ixx>0.00151818</ixx>
+            <ixy>-2.13586e-06</ixy>
+            <ixz>0.000434128</ixz>
+            <iyy>0.00286333</iyy>
+            <iyz>1.57525e-07</iyz>
+            <izz>0.00211437</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_RHY_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_RHY_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_RHY_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_RHY_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='RHY' type='revolute'>
+        <child>Body_RHY</child>
+        <parent>Body_Hip</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-1.5708</lower>
+            <upper>1.5708</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_RHR'>
+        <pose>0.0643914 -0.0859667 -0.320093 0 -0 0</pose>
+        <inertial>
+          <pose>-0.0497479 -0.0125311 -0.0156437 0 -0 0</pose>
+          <mass>1.93266</mass>
+          <inertia>
+            <ixx>0.00403487</ixx>
+            <ixy>-7.9452e-05</ixy>
+            <ixz>-0.000125343</ixz>
+            <iyy>0.00332707</iyy>
+            <iyz>0.000551964</iyz>
+            <izz>0.00317173</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_RHR_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_RHR_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_RHR_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_RHR_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='RHR' type='revolute'>
+        <child>Body_RHR</child>
+        <parent>Body_RHY</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-0.488692</lower>
+            <upper>0.488692</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_RHP'>
+        <pose>0.011484 -0.151542 -0.319993 0 -0 0</pose>
+        <inertial>
+          <pose>0.0195049 0.0595775 -0.175202 0 -0 0</pose>
+          <mass>2.8201</mass>
+          <inertia>
+            <ixx>0.0295102</ixx>
+            <ixy>-0.000184399</ixy>
+            <ixz>-0.000370291</ixz>
+            <iyy>0.0273771</iyy>
+            <iyz>-0.00065658</iyz>
+            <izz>0.00838035</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_RHP_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_RHP_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_RHP_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_RHP_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='RHP' type='revolute'>
+        <child>Body_RHP</child>
+        <parent>Body_RHR</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1.48353</lower>
+            <upper>1.6057</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_RKP'>
+        <pose>0.0122504 -0.10704 -0.6 0 -0 0</pose>
+        <inertial>
+          <pose>0.0128254 0.00727567 -0.171431 0 -0 0</pose>
+          <mass>1.80912</mass>
+          <inertia>
+            <ixx>0.0232156</ixx>
+            <ixy>-0.000251648</ixy>
+            <ixz>-0.00129343</ixz>
+            <iyy>0.0208342</iyy>
+            <iyz>-0.00278068</iyz>
+            <izz>0.0059204</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_RKP_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_RKP_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_RKP_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_RKP_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='RKP' type='revolute'>
+        <child>Body_RKP</child>
+        <parent>Body_RHP</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-0.0698132</lower>
+            <upper>2.60054</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_RAP'>
+        <pose>0.0122576 -0.131796 -0.879942 0 -0 0</pose>
+        <inertial>
+          <pose>0.0198702 0.0459693 0.0115069 0 -0 0</pose>
+          <mass>1.63501</mass>
+          <inertia>
+            <ixx>0.00231659</ixx>
+            <ixy>-1.87402e-05</ixy>
+            <ixz>0.000369899</ixz>
+            <iyy>0.00330411</iyy>
+            <iyz>-6.38153e-05</iyz>
+            <izz>0.00279495</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_RAP_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_RAP_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_RAP_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_RAP_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='RAP' type='revolute'>
+        <child>Body_RAP</child>
+        <parent>Body_RKP</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1.29154</lower>
+            <upper>1.69297</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_RAR'>
+        <pose>0.0834363 -0.0851953 -0.879942 0 -0 0</pose>
+        <inertial>
+          <pose>-0.0515094 -0.00216398 -0.0693881 0 -0 0</pose>
+          <mass>1.20318</mass>
+          <inertia>
+            <ixx>0.00295183</ixx>
+            <ixy>-3.23211e-05</ixy>
+            <ixz>0.000141769</ixz>
+            <iyy>0.00524792</iyy>
+            <iyz>-5.95404e-05</iyz>
+            <izz>0.00516817</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_RAR_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_RAR_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_RAR_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_RAR_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='RAR' type='revolute'>
+        <child>Body_RAR</child>
+        <parent>Body_RAP</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-0.191986</lower>
+            <upper>0.191986</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_LSP'>
+        <pose>0.0122581 0.143973 0.0486356 0 -0 0</pose>
+        <inertial>
+          <pose>0.0167207 0.0570407 9.91873e-06 0 -0 0</pose>
+          <mass>0.646655</mass>
+          <inertia>
+            <ixx>0.000893731</ixx>
+            <ixy>-0.000156484</ixy>
+            <ixz>4.98007e-07</ixz>
+            <iyy>0.00093016</iyy>
+            <iyz>1.57095e-07</iyz>
+            <izz>0.00124323</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_LSP_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LSP_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_LSP_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LSP_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='LSP' type='revolute'>
+        <child>Body_LSP</child>
+        <parent>Body_Torso</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-3.14158</lower>
+            <upper>3.14158</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_LSR'>
+        <pose>0.0391581 0.215973 0.0486356 0 -0 0</pose>
+        <inertial>
+          <pose>-0.036208 -8.31243e-05 -0.00126685 0 -0 0</pose>
+          <mass>0.413368</mass>
+          <inertia>
+            <ixx>0.000269283</ixx>
+            <ixy>4.52571e-07</ixy>
+            <ixz>3.23662e-06</ixz>
+            <iyy>0.00037679</iyy>
+            <iyz>9.93935e-07</iyz>
+            <izz>0.000360355</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_LSR_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LSR_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_LSR_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LSR_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='LSR' type='revolute'>
+        <child>Body_LSR</child>
+        <parent>Body_LSP</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-1.5708</lower>
+            <upper>1.5708</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_LSY'>
+        <pose>0.0122581 0.215807 0.0241356 0 -0 0</pose>
+        <inertial>
+          <pose>0.00456121 3.10576e-05 -0.0907824 0 -0 0</pose>
+          <mass>1.15461</mass>
+          <inertia>
+            <ixx>0.00365479</ixx>
+            <ixy>2.05436e-06</ixy>
+            <ixz>0.000418448</ixz>
+            <iyy>0.00364731</iyy>
+            <iyz>-3.09648e-05</iyz>
+            <izz>0.00060633</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_LSY_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LSY_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_LSY_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LSY_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='LSY' type='revolute'>
+        <child>Body_LSY</child>
+        <parent>Body_LSR</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-3.14158</lower>
+            <upper>3.14158</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_LEP'>
+        <pose>0.0342517 0.197807 -0.133369 0 -0 0</pose>
+        <inertial>
+          <pose>-0.0217349 0.0178314 -0.0610873 0 -0 0</pose>
+          <mass>0.44094</mass>
+          <inertia>
+            <ixx>0.0005027</ixx>
+            <ixy>3.64587e-06</ixy>
+            <ixz>-1.41388e-05</ixz>
+            <iyy>0.00049415</iyy>
+            <iyz>7.65528e-06</iyz>
+            <izz>0.000131786</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_LEP_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LEP_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_LEP_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LEP_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='LEP' type='revolute'>
+        <child>Body_LEP</child>
+        <parent>Body_LSY</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-2.49582</lower>
+            <upper>0.0698132</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_LWY'>
+        <pose>0.0122611 0.215807 -0.244777 0 -0 0</pose>
+        <inertial>
+          <pose>-0.00122019 0.000635233 -0.0238043 0 -0 0</pose>
+          <mass>0.537738</mass>
+          <inertia>
+            <ixx>0.00063457</ixx>
+            <ixy>-4.62486e-07</ixy>
+            <ixz>6.20682e-06</ixz>
+            <iyy>0.000563918</iyy>
+            <iyz>3.54044e-05</iyz>
+            <izz>0.000305422</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_LWY_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LWY_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_LWY_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LWY_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='LWY' type='revolute'>
+        <child>Body_LWY</child>
+        <parent>Body_LEP</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-3.14158</lower>
+            <upper>3.14158</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_LWP'>
+        <pose>0.0122628 0.207077 -0.297327 0 -0 0</pose>
+        <inertial>
+          <pose>-0.000258199 0.011442 -0.0461472 0 -0 0</pose>
+          <mass>0.164393</mass>
+          <inertia>
+            <ixx>9.74327e-05</ixx>
+            <ixy>-5.22155e-07</ixy>
+            <ixz>-1.17317e-06</ixz>
+            <iyy>0.000144494</iyy>
+            <iyz>9.4927e-06</iyz>
+            <izz>0.000122681</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_LWP_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LWP_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_LWP_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_LWP_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='LWP' type='revolute'>
+        <child>Body_LWP</child>
+        <parent>Body_LWY</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1.64061</lower>
+            <upper>1.01229</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='leftIndexProximal'>
+        <pose>0.0411787 0.236939 -0.38621 1.5708 0.785398 1.5708</pose>
+        <inertial>
+          <pose>0.024 0 0 0 -0 0</pose>
+          <mass>0.096</mass>
+          <inertia>
+            <ixx>2.304e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>8.96e-06</iyy>
+            <iyz>6.85949e-15</iyz>
+            <izz>9.216e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='leftIndexProximal_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftIndexProximal_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='leftIndexProximal_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftIndexProximal_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='leftIndexKnuckle1' type='revolute'>
+        <child>leftIndexProximal</child>
+        <parent>Body_LWP</parent>
+        <axis>
+          <xyz>1 1e-06 -3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='leftIndexMedial'>
+        <pose>0.0411786 0.259566 -0.408838 1.5708 0.785398 1.5708</pose>
+        <inertial>
+          <pose>0.0165 0 0 0 -0 0</pose>
+          <mass>0.048</mass>
+          <inertia>
+            <ixx>1.152e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.59e-06</iyy>
+            <iyz>3.42975e-15</iyz>
+            <izz>2.718e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='leftIndexMedial_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftIndexMedial_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='leftIndexMedial_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftIndexMedial_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='Knuckle221' type='revolute'>
+        <child>leftIndexMedial</child>
+        <parent>leftIndexProximal</parent>
+        <axis>
+          <xyz>-1 -1e-06 3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='leftIndexDistal'>
+        <pose>0.0411786 0.275123 -0.424394 1.5708 0.785398 1.5708</pose>
+        <inertial>
+          <pose>0.015 0 0 0 -0 0</pose>
+          <mass>0.08</mass>
+          <inertia>
+            <ixx>1.92e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.82667e-06</iyy>
+            <iyz>5.71624e-15</iyz>
+            <izz>4.04e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='leftIndexDistal_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftIndexDistal_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='leftIndexDistal_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftIndexDistal_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='Knuckle322' type='revolute'>
+        <child>leftIndexDistal</child>
+        <parent>leftIndexMedial</parent>
+        <axis>
+          <xyz>-1 -1e-06 3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='leftMiddleProximal'>
+        <pose>0.0221987 0.236939 -0.38621 1.5708 0.785398 1.5708</pose>
+        <inertial>
+          <pose>0.024 0 0 0 -0 0</pose>
+          <mass>0.096</mass>
+          <inertia>
+            <ixx>2.304e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>8.96e-06</iyy>
+            <iyz>6.85949e-15</iyz>
+            <izz>9.216e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='leftMiddleProximal_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftMiddleProximal_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='leftMiddleProximal_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftMiddleProximal_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='leftMiddleKnuckle1' type='revolute'>
+        <child>leftMiddleProximal</child>
+        <parent>Body_LWP</parent>
+        <axis>
+          <xyz>1 1e-06 -3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='leftMiddleMedial'>
+        <pose>0.0221986 0.259566 -0.408838 1.5708 0.785398 1.5708</pose>
+        <inertial>
+          <pose>0.0165 0 0 0 -0 0</pose>
+          <mass>0.048</mass>
+          <inertia>
+            <ixx>1.152e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.59e-06</iyy>
+            <iyz>3.42975e-15</iyz>
+            <izz>2.718e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='leftMiddleMedial_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftMiddleMedial_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='leftMiddleMedial_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftMiddleMedial_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='Knuckle218' type='revolute'>
+        <child>leftMiddleMedial</child>
+        <parent>leftMiddleProximal</parent>
+        <axis>
+          <xyz>-1 -1e-06 3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='leftMiddleDistal'>
+        <pose>0.0221985 0.275123 -0.424394 1.5708 0.785398 1.5708</pose>
+        <inertial>
+          <pose>0.015 0 0 0 -0 0</pose>
+          <mass>0.08</mass>
+          <inertia>
+            <ixx>1.92e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.82667e-06</iyy>
+            <iyz>5.71624e-15</iyz>
+            <izz>4.04e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='leftMiddleDistal_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftMiddleDistal_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='leftMiddleDistal_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftMiddleDistal_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='Knuckle319' type='revolute'>
+        <child>leftMiddleDistal</child>
+        <parent>leftMiddleMedial</parent>
+        <axis>
+          <xyz>-1 -1e-06 3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='leftPinkyProximal'>
+        <pose>-0.0158413 0.236939 -0.38621 1.5708 0.785398 1.5708</pose>
+        <inertial>
+          <pose>0.024 0 0 0 -0 0</pose>
+          <mass>0.096</mass>
+          <inertia>
+            <ixx>2.304e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>8.96e-06</iyy>
+            <iyz>6.85949e-15</iyz>
+            <izz>9.216e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='leftPinkyProximal_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftPinkyProximal_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='leftPinkyProximal_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftPinkyProximal_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='leftPinkyKnuckle1' type='revolute'>
+        <child>leftPinkyProximal</child>
+        <parent>Body_LWP</parent>
+        <axis>
+          <xyz>1 1e-06 -3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='leftPinkyMedial'>
+        <pose>-0.0158414 0.259566 -0.408838 1.5708 0.785398 1.5708</pose>
+        <inertial>
+          <pose>0.0165 0 0 0 -0 0</pose>
+          <mass>0.048</mass>
+          <inertia>
+            <ixx>1.152e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.59e-06</iyy>
+            <iyz>3.42975e-15</iyz>
+            <izz>2.718e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='leftPinkyMedial_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftPinkyMedial_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='leftPinkyMedial_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftPinkyMedial_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='Knuckle212' type='revolute'>
+        <child>leftPinkyMedial</child>
+        <parent>leftPinkyProximal</parent>
+        <axis>
+          <xyz>-1 -1e-06 3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='leftPinkyDistal'>
+        <pose>-0.0158414 0.275123 -0.424394 1.5708 0.785398 1.5708</pose>
+        <inertial>
+          <pose>0.015 0 0 0 -0 0</pose>
+          <mass>0.08</mass>
+          <inertia>
+            <ixx>1.92e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.82667e-06</iyy>
+            <iyz>5.71624e-15</iyz>
+            <izz>4.04e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='leftPinkyDistal_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftPinkyDistal_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='leftPinkyDistal_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftPinkyDistal_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='Knuckle313' type='revolute'>
+        <child>leftPinkyDistal</child>
+        <parent>leftPinkyMedial</parent>
+        <axis>
+          <xyz>-1 -1e-06 3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='leftRingProximal'>
+        <pose>0.00315868 0.236939 -0.38621 1.5708 0.785398 1.5708</pose>
+        <inertial>
+          <pose>0.024 0 0 0 -0 0</pose>
+          <mass>0.096</mass>
+          <inertia>
+            <ixx>2.304e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>8.96e-06</iyy>
+            <iyz>6.85949e-15</iyz>
+            <izz>9.216e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='leftRingProximal_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftRingProximal_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='leftRingProximal_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftRingProximal_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='leftRingKnuckle1' type='revolute'>
+        <child>leftRingProximal</child>
+        <parent>Body_LWP</parent>
+        <axis>
+          <xyz>1 1e-06 -3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='leftRingMedial'>
+        <pose>0.0031586 0.259566 -0.408838 1.5708 0.785398 1.5708</pose>
+        <inertial>
+          <pose>0.0165 0 0 0 -0 0</pose>
+          <mass>0.048</mass>
+          <inertia>
+            <ixx>1.152e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.59e-06</iyy>
+            <iyz>3.42975e-15</iyz>
+            <izz>2.718e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='leftRingMedial_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftRingMedial_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='leftRingMedial_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftRingMedial_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='Knuckle215' type='revolute'>
+        <child>leftRingMedial</child>
+        <parent>leftRingProximal</parent>
+        <axis>
+          <xyz>-1 -1e-06 3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='leftRingDistal'>
+        <pose>0.00315854 0.275123 -0.424394 1.5708 0.785398 1.5708</pose>
+        <inertial>
+          <pose>0.015 0 0 0 -0 0</pose>
+          <mass>0.08</mass>
+          <inertia>
+            <ixx>1.92e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.82667e-06</iyy>
+            <iyz>5.71624e-15</iyz>
+            <izz>4.04e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='leftRingDistal_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftRingDistal_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='leftRingDistal_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftRingDistal_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='Knuckle316' type='revolute'>
+        <child>leftRingDistal</child>
+        <parent>leftRingMedial</parent>
+        <axis>
+          <xyz>-1 -1e-06 3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='leftThumbProximal'>
+        <pose>0.0331587 0.208998 -0.358279 1.5708 -0.785398 -1.5708</pose>
+        <inertial>
+          <pose>0.024 0 0 0 -0 0</pose>
+          <mass>0.096</mass>
+          <inertia>
+            <ixx>2.304e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>8.96e-06</iyy>
+            <iyz>6.85949e-15</iyz>
+            <izz>9.216e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='leftThumbProximal_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftThumbProximal_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='leftThumbProximal_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftThumbProximal_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='leftThumbKnuckle1' type='revolute'>
+        <child>leftThumbProximal</child>
+        <parent>Body_LWP</parent>
+        <axis>
+          <xyz>-1 1e-06 -3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='leftThumbMedial'>
+        <pose>0.0331586 0.18637 -0.335652 1.5708 -0.785398 -1.5708</pose>
+        <inertial>
+          <pose>0.0165 0 0 0 -0 0</pose>
+          <mass>0.048</mass>
+          <inertia>
+            <ixx>1.152e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.59e-06</iyy>
+            <iyz>3.42975e-15</iyz>
+            <izz>2.718e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='leftThumbMedial_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftThumbMedial_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='leftThumbMedial_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftThumbMedial_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='Knuckle29' type='revolute'>
+        <child>leftThumbMedial</child>
+        <parent>leftThumbProximal</parent>
+        <axis>
+          <xyz>1 -1e-06 3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='leftThumbDistal'>
+        <pose>0.0331586 0.170814 -0.320096 1.5708 -0.785398 -1.5708</pose>
+        <inertial>
+          <pose>0.015 0 0 0 -0 0</pose>
+          <mass>0.08</mass>
+          <inertia>
+            <ixx>1.92e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.82667e-06</iyy>
+            <iyz>5.71624e-15</iyz>
+            <izz>4.04e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='leftThumbDistal_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftThumbDistal_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='leftThumbDistal_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/leftThumbDistal_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='Knuckle310' type='revolute'>
+        <child>leftThumbDistal</child>
+        <parent>leftThumbMedial</parent>
+        <axis>
+          <xyz>1 -1e-06 3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_RSP'>
+        <pose>0.0122581 -0.139027 0.0486356 0 -0 0</pose>
+        <inertial>
+          <pose>0.0167207 -0.0570407 9.91873e-06 0 -0 0</pose>
+          <mass>0.646655</mass>
+          <inertia>
+            <ixx>0.000893731</ixx>
+            <ixy>0.000156484</ixy>
+            <ixz>4.98007e-07</ixz>
+            <iyy>0.00093016</iyy>
+            <iyz>-1.57095e-07</iyz>
+            <izz>0.00124323</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_RSP_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_RSP_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_RSP_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_RSP_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='RSP' type='revolute'>
+        <child>Body_RSP</child>
+        <parent>Body_Torso</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-3.14158</lower>
+            <upper>3.14158</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_RSR'>
+        <pose>0.0391581 -0.211027 0.0486356 0 -0 0</pose>
+        <inertial>
+          <pose>-0.036208 8.31243e-05 -0.00126685 0 -0 0</pose>
+          <mass>0.413368</mass>
+          <inertia>
+            <ixx>0.000269283</ixx>
+            <ixy>-4.52571e-07</ixy>
+            <ixz>3.23662e-06</ixz>
+            <iyy>0.00037679</iyy>
+            <iyz>-9.93935e-07</iyz>
+            <izz>0.000360355</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_RSR_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_RSR_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_RSR_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_RSR_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='RSR' type='revolute'>
+        <child>Body_RSR</child>
+        <parent>Body_RSP</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-1.5708</lower>
+            <upper>1.5708</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_RSY'>
+        <pose>0.0122581 -0.211027 0.0241356 0 -0 0</pose>
+        <inertial>
+          <pose>0.00456121 -3.10576e-05 -0.0907824 0 -0 0</pose>
+          <mass>1.15461</mass>
+          <inertia>
+            <ixx>0.00365479</ixx>
+            <ixy>-2.05436e-06</ixy>
+            <ixz>0.000418448</ixz>
+            <iyy>0.00364731</iyy>
+            <iyz>3.09648e-05</iyz>
+            <izz>0.00060633</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_RSY_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_RSY_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_RSY_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_RSY_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='RSY' type='revolute'>
+        <child>Body_RSY</child>
+        <parent>Body_RSR</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-3.14158</lower>
+            <upper>3.14158</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_REP'>
+        <pose>0.0342517 -0.193027 -0.133369 0 -0 0</pose>
+        <inertial>
+          <pose>-0.0217349 -0.0178314 -0.0610873 0 -0 0</pose>
+          <mass>0.44094</mass>
+          <inertia>
+            <ixx>0.0005027</ixx>
+            <ixy>-3.64587e-06</ixy>
+            <ixz>-1.41388e-05</ixz>
+            <iyy>0.00049415</iyy>
+            <iyz>-7.65528e-06</iyz>
+            <izz>0.000131786</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_REP_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_REP_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_REP_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_REP_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='REP' type='revolute'>
+        <child>Body_REP</child>
+        <parent>Body_RSY</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-2.49582</lower>
+            <upper>0.0698132</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_RWY'>
+        <pose>0.0122611 -0.211027 -0.244777 0 -0 0</pose>
+        <inertial>
+          <pose>-0.00122019 -0.000635233 -0.0238043 0 -0 0</pose>
+          <mass>0.537738</mass>
+          <inertia>
+            <ixx>0.00063457</ixx>
+            <ixy>4.62486e-07</ixy>
+            <ixz>6.20682e-06</ixz>
+            <iyy>0.000563918</iyy>
+            <iyz>-3.54044e-05</iyz>
+            <izz>0.000305422</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_RWY_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_RWY_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_RWY_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_RWY_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='RWY' type='revolute'>
+        <child>Body_RWY</child>
+        <parent>Body_REP</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-3.14158</lower>
+            <upper>3.14158</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='Body_RWP'>
+        <pose>0.0122628 -0.201027 -0.297327 0 -0 0</pose>
+        <inertial>
+          <pose>-0.000258199 -0.011442 -0.0461472 0 -0 0</pose>
+          <mass>0.164393</mass>
+          <inertia>
+            <ixx>9.74327e-05</ixx>
+            <ixy>5.22155e-07</ixy>
+            <ixz>-1.17317e-06</ixz>
+            <iyy>0.000144494</iyy>
+            <iyz>-9.4927e-06</iyz>
+            <izz>0.000122681</izz>
+          </inertia>
+        </inertial>
+        <collision name='Body_RWP_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_RWP_col.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='Body_RWP_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/Body_RWP_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='RWP' type='revolute'>
+        <child>Body_RWP</child>
+        <parent>Body_RWY</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1.64061</lower>
+            <upper>1.01229</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='rightIndexProximal'>
+        <pose>0.0411787 -0.230889 -0.38621 1.5708 0.785398 -1.5708</pose>
+        <inertial>
+          <pose>0.024 0 0 0 -0 0</pose>
+          <mass>0.096</mass>
+          <inertia>
+            <ixx>2.304e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>8.96e-06</iyy>
+            <iyz>6.85949e-15</iyz>
+            <izz>9.216e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='rightIndexProximal_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightIndexProximal_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='rightIndexProximal_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightIndexProximal_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='rightIndexKnuckle1' type='revolute'>
+        <child>rightIndexProximal</child>
+        <parent>Body_RWP</parent>
+        <axis>
+          <xyz>-1 6e-06 -3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='rightIndexMedial'>
+        <pose>0.0411786 -0.253516 -0.408838 1.5708 0.785398 -1.5708</pose>
+        <inertial>
+          <pose>0.0165 0 0 0 -0 0</pose>
+          <mass>0.048</mass>
+          <inertia>
+            <ixx>1.152e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.59e-06</iyy>
+            <iyz>3.42975e-15</iyz>
+            <izz>2.718e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='rightIndexMedial_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightIndexMedial_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='rightIndexMedial_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightIndexMedial_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='Knuckle2' type='revolute'>
+        <child>rightIndexMedial</child>
+        <parent>rightIndexProximal</parent>
+        <axis>
+          <xyz>1 -6e-06 3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='rightIndexDistal'>
+        <pose>0.0411786 -0.269072 -0.424394 1.5708 0.785398 -1.5708</pose>
+        <inertial>
+          <pose>0.015 0 0 0 -0 0</pose>
+          <mass>0.08</mass>
+          <inertia>
+            <ixx>1.92e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.82667e-06</iyy>
+            <iyz>5.71624e-15</iyz>
+            <izz>4.04e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='rightIndexDistal_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightIndexDistal_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='rightIndexDistal_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightIndexDistal_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='Knuckle3' type='revolute'>
+        <child>rightIndexDistal</child>
+        <parent>rightIndexMedial</parent>
+        <axis>
+          <xyz>1 -6e-06 3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='rightMiddleProximal'>
+        <pose>0.0221987 -0.230889 -0.38621 1.5708 0.785398 -1.5708</pose>
+        <inertial>
+          <pose>0.024 0 0 0 -0 0</pose>
+          <mass>0.096</mass>
+          <inertia>
+            <ixx>2.304e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>8.96e-06</iyy>
+            <iyz>6.85949e-15</iyz>
+            <izz>9.216e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='rightMiddleProximal_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightMiddleProximal_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='rightMiddleProximal_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightMiddleProximal_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='rightMiddleKnuckle1' type='revolute'>
+        <child>rightMiddleProximal</child>
+        <parent>Body_RWP</parent>
+        <axis>
+          <xyz>-1 6e-06 -3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='rightMiddleMedial'>
+        <pose>0.0221986 -0.253516 -0.408838 1.5708 0.785398 -1.5708</pose>
+        <inertial>
+          <pose>0.0165 0 0 0 -0 0</pose>
+          <mass>0.048</mass>
+          <inertia>
+            <ixx>1.152e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.59e-06</iyy>
+            <iyz>3.42975e-15</iyz>
+            <izz>2.718e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='rightMiddleMedial_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightMiddleMedial_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='rightMiddleMedial_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightMiddleMedial_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='Knuckle239' type='revolute'>
+        <child>rightMiddleMedial</child>
+        <parent>rightMiddleProximal</parent>
+        <axis>
+          <xyz>1 -6e-06 3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='rightMiddleDistal'>
+        <pose>0.0221985 -0.269072 -0.424394 1.5708 0.785398 -1.5708</pose>
+        <inertial>
+          <pose>0.015 0 0 0 -0 0</pose>
+          <mass>0.08</mass>
+          <inertia>
+            <ixx>1.92e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.82667e-06</iyy>
+            <iyz>5.71624e-15</iyz>
+            <izz>4.04e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='rightMiddleDistal_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightMiddleDistal_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='rightMiddleDistal_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightMiddleDistal_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='Knuckle340' type='revolute'>
+        <child>rightMiddleDistal</child>
+        <parent>rightMiddleMedial</parent>
+        <axis>
+          <xyz>1 -6e-06 3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='rightPinkyProximal'>
+        <pose>-0.0158413 -0.230889 -0.38621 1.5708 0.785398 -1.5708</pose>
+        <inertial>
+          <pose>0.024 0 0 0 -0 0</pose>
+          <mass>0.096</mass>
+          <inertia>
+            <ixx>2.304e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>8.96e-06</iyy>
+            <iyz>6.85949e-15</iyz>
+            <izz>9.216e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='rightPinkyProximal_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightPinkyProximal_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='rightPinkyProximal_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightPinkyProximal_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='rightPinkyKnuckle1' type='revolute'>
+        <child>rightPinkyProximal</child>
+        <parent>Body_RWP</parent>
+        <axis>
+          <xyz>-1 6e-06 -3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='rightPinkyMedial'>
+        <pose>-0.0158414 -0.253516 -0.408838 1.5708 0.785398 -1.5708</pose>
+        <inertial>
+          <pose>0.0165 0 0 0 -0 0</pose>
+          <mass>0.048</mass>
+          <inertia>
+            <ixx>1.152e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.59e-06</iyy>
+            <iyz>3.42975e-15</iyz>
+            <izz>2.718e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='rightPinkyMedial_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightPinkyMedial_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='rightPinkyMedial_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightPinkyMedial_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='Knuckle233' type='revolute'>
+        <child>rightPinkyMedial</child>
+        <parent>rightPinkyProximal</parent>
+        <axis>
+          <xyz>1 -6e-06 3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='rightPinkyDistal'>
+        <pose>-0.0158414 -0.269072 -0.424394 1.5708 0.785398 -1.5708</pose>
+        <inertial>
+          <pose>0.015 0 0 0 -0 0</pose>
+          <mass>0.08</mass>
+          <inertia>
+            <ixx>1.92e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.82667e-06</iyy>
+            <iyz>5.71624e-15</iyz>
+            <izz>4.04e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='rightPinkyDistal_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightPinkyDistal_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='rightPinkyDistal_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightPinkyDistal_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='Knuckle334' type='revolute'>
+        <child>rightPinkyDistal</child>
+        <parent>rightPinkyMedial</parent>
+        <axis>
+          <xyz>1 -6e-06 3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='rightRingProximal'>
+        <pose>0.00315868 -0.230889 -0.38621 1.5708 0.785398 -1.5708</pose>
+        <inertial>
+          <pose>0.024 0 0 0 -0 0</pose>
+          <mass>0.096</mass>
+          <inertia>
+            <ixx>2.304e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>8.96e-06</iyy>
+            <iyz>6.85949e-15</iyz>
+            <izz>9.216e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='rightRingProximal_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightRingProximal_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='rightRingProximal_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightRingProximal_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='rightRingKnuckle1' type='revolute'>
+        <child>rightRingProximal</child>
+        <parent>Body_RWP</parent>
+        <axis>
+          <xyz>-1 6e-06 -3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='rightRingMedial'>
+        <pose>0.0031586 -0.253516 -0.408838 1.5708 0.785398 -1.5708</pose>
+        <inertial>
+          <pose>0.0165 0 0 0 -0 0</pose>
+          <mass>0.048</mass>
+          <inertia>
+            <ixx>1.152e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.59e-06</iyy>
+            <iyz>3.42975e-15</iyz>
+            <izz>2.718e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='rightRingMedial_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightRingMedial_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='rightRingMedial_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightRingMedial_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='Knuckle236' type='revolute'>
+        <child>rightRingMedial</child>
+        <parent>rightRingProximal</parent>
+        <axis>
+          <xyz>1 -6e-06 3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='rightRingDistal'>
+        <pose>0.00315854 -0.269072 -0.424394 1.5708 0.785398 -1.5708</pose>
+        <inertial>
+          <pose>0.015 0 0 0 -0 0</pose>
+          <mass>0.08</mass>
+          <inertia>
+            <ixx>1.92e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.82667e-06</iyy>
+            <iyz>5.71624e-15</iyz>
+            <izz>4.04e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='rightRingDistal_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightRingDistal_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='rightRingDistal_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightRingDistal_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='Knuckle337' type='revolute'>
+        <child>rightRingDistal</child>
+        <parent>rightRingMedial</parent>
+        <axis>
+          <xyz>1 -6e-06 3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='rightThumbProximal'>
+        <pose>0.0331587 -0.202948 -0.358279 1.5708 -0.785398 1.5708</pose>
+        <inertial>
+          <pose>0.024 0 0 0 -0 0</pose>
+          <mass>0.096</mass>
+          <inertia>
+            <ixx>2.304e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>8.96e-06</iyy>
+            <iyz>6.85949e-15</iyz>
+            <izz>9.216e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='rightThumbProximal_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightThumbProximal_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='rightThumbProximal_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightThumbProximal_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='rightThumbKnuckle1' type='revolute'>
+        <child>rightThumbProximal</child>
+        <parent>Body_RWP</parent>
+        <axis>
+          <xyz>1 6e-06 -3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='rightThumbMedial'>
+        <pose>0.0331586 -0.18032 -0.335652 1.5708 -0.785398 1.5708</pose>
+        <inertial>
+          <pose>0.0165 0 0 0 -0 0</pose>
+          <mass>0.048</mass>
+          <inertia>
+            <ixx>1.152e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.59e-06</iyy>
+            <iyz>3.42975e-15</iyz>
+            <izz>2.718e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='rightThumbMedial_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightThumbMedial_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='rightThumbMedial_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightThumbMedial_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='Knuckle230' type='revolute'>
+        <child>rightThumbMedial</child>
+        <parent>rightThumbProximal</parent>
+        <axis>
+          <xyz>-1 -6e-06 3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <link name='rightThumbDistal'>
+        <pose>0.0331586 -0.164764 -0.320096 1.5708 -0.785398 1.5708</pose>
+        <inertial>
+          <pose>0.015 0 0 0 -0 0</pose>
+          <mass>0.08</mass>
+          <inertia>
+            <ixx>1.92e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.82667e-06</iyy>
+            <iyz>5.71624e-15</iyz>
+            <izz>4.04e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='rightThumbDistal_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightThumbDistal_vis.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='rightThumbDistal_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://hubo/meshes/rightThumbDistal_vis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='Knuckle331' type='revolute'>
+        <child>rightThumbDistal</child>
+        <parent>rightThumbMedial</parent>
+        <axis>
+          <xyz>-1 -6e-06 3e-06</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics/>
+        </axis>
+      </joint>
+      <pose>-1 -0.452437 1 0 -0 0</pose>
+      <static>0</static>
+      <plugin name='hubo_stand' filename='/home/artlab2/.gazebo/models/hubo/plugins/libhubo_stand.so'/>
+    </model>
+    <state world_name='default'>
+      <sim_time>0 554000000</sim_time>
+      <real_time>1 594920179</real_time>
+      <wall_time>1430840681 890053398</wall_time>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='huboplus_0'>
+        <pose>-1 -0.452437 1 0 -0 0</pose>
+        <link name='Body_HNP'>
+          <pose>-0.987742 -0.449984 1.19694 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_Hip'>
+          <pose>-0.987734 -0.449977 0.84738 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_LAP'>
+          <pose>-0.987742 -0.315631 0.120058 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_LAR'>
+          <pose>-0.916564 -0.362232 0.120058 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_LEP'>
+          <pose>-0.965748 -0.25463 0.866631 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_LHP'>
+          <pose>-0.988516 -0.295885 0.680007 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_LHR'>
+          <pose>-0.935609 -0.36146 0.679907 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_LHY'>
+          <pose>-0.987609 -0.361462 0.770911 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_LKP'>
+          <pose>-0.98775 -0.340387 0.4 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_LSP'>
+          <pose>-0.987742 -0.308464 1.04864 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_LSR'>
+          <pose>-0.960842 -0.236464 1.04864 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_LSY'>
+          <pose>-0.987742 -0.23663 1.02414 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_LWP'>
+          <pose>-0.987737 -0.24536 0.702673 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_LWY'>
+          <pose>-0.987739 -0.23663 0.755223 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_RAP'>
+          <pose>-0.987742 -0.584233 0.120058 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_RAR'>
+          <pose>-0.916564 -0.537632 0.120058 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_REP'>
+          <pose>-0.965748 -0.645464 0.866631 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_RHP'>
+          <pose>-0.988516 -0.603979 0.680007 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_RHR'>
+          <pose>-0.935609 -0.538404 0.679907 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_RHY'>
+          <pose>-0.987609 -0.538477 0.770911 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_RKP'>
+          <pose>-0.98775 -0.559477 0.4 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_RSP'>
+          <pose>-0.987742 -0.591464 1.04864 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_RSR'>
+          <pose>-0.960842 -0.663464 1.04864 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_RSY'>
+          <pose>-0.987742 -0.663464 1.02414 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_RWP'>
+          <pose>-0.987737 -0.653464 0.702673 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_RWY'>
+          <pose>-0.987739 -0.663464 0.755223 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Body_Torso'>
+          <pose>-1 -0.452437 1 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='leftIndexDistal'>
+          <pose>-0.958821 -0.177314 0.575606 1.5708 0.785398 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='leftIndexMedial'>
+          <pose>-0.958821 -0.192871 0.591162 1.5708 0.785398 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='leftIndexProximal'>
+          <pose>-0.958821 -0.215498 0.61379 1.5708 0.785398 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='leftMiddleDistal'>
+          <pose>-0.977802 -0.177314 0.575606 1.5708 0.785398 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='leftMiddleMedial'>
+          <pose>-0.977801 -0.192871 0.591162 1.5708 0.785398 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='leftMiddleProximal'>
+          <pose>-0.977801 -0.215498 0.61379 1.5708 0.785398 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='leftPinkyDistal'>
+          <pose>-1.01584 -0.177314 0.575606 1.5708 0.785398 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='leftPinkyMedial'>
+          <pose>-1.01584 -0.192871 0.591162 1.5708 0.785398 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='leftPinkyProximal'>
+          <pose>-1.01584 -0.215498 0.61379 1.5708 0.785398 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='leftRingDistal'>
+          <pose>-0.996841 -0.177314 0.575606 1.5708 0.785398 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='leftRingMedial'>
+          <pose>-0.996841 -0.192871 0.591162 1.5708 0.785398 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='leftRingProximal'>
+          <pose>-0.996841 -0.215498 0.61379 1.5708 0.785398 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='leftThumbDistal'>
+          <pose>-0.966841 -0.281623 0.679904 1.5708 -0.785398 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='leftThumbMedial'>
+          <pose>-0.966841 -0.266067 0.664348 1.5708 -0.785398 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='leftThumbProximal'>
+          <pose>-0.966841 -0.243439 0.641721 1.5708 -0.785398 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='rightIndexDistal'>
+          <pose>-0.958821 -0.721509 0.575606 1.5708 0.785398 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='rightIndexMedial'>
+          <pose>-0.958821 -0.705953 0.591162 1.5708 0.785398 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='rightIndexProximal'>
+          <pose>-0.958821 -0.683326 0.61379 1.5708 0.785398 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='rightMiddleDistal'>
+          <pose>-0.977802 -0.721509 0.575606 1.5708 0.785398 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='rightMiddleMedial'>
+          <pose>-0.977801 -0.705953 0.591162 1.5708 0.785398 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='rightMiddleProximal'>
+          <pose>-0.977801 -0.683326 0.61379 1.5708 0.785398 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='rightPinkyDistal'>
+          <pose>-1.01584 -0.721509 0.575606 1.5708 0.785398 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='rightPinkyMedial'>
+          <pose>-1.01584 -0.705953 0.591162 1.5708 0.785398 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='rightPinkyProximal'>
+          <pose>-1.01584 -0.683326 0.61379 1.5708 0.785398 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='rightRingDistal'>
+          <pose>-0.996841 -0.721509 0.575606 1.5708 0.785398 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='rightRingMedial'>
+          <pose>-0.996841 -0.705953 0.591162 1.5708 0.785398 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='rightRingProximal'>
+          <pose>-0.996841 -0.683326 0.61379 1.5708 0.785398 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='rightThumbDistal'>
+          <pose>-0.966841 -0.617201 0.679904 1.5708 -0.785398 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='rightThumbMedial'>
+          <pose>-0.966841 -0.632757 0.664348 1.5708 -0.785398 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='rightThumbProximal'>
+          <pose>-0.966841 -0.655385 0.641721 1.5708 -0.785398 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>1.30358 0.185075 1.25023 0 0.255911 -2.77895</pose>
+        <view_controller>orbit</view_controller>
+      </camera>
+    </gui>
+  </world>
+</sdf>

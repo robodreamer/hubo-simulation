@@ -1,0 +1,107 @@
+hubo:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50  
+  
+  # Position Controllers ---------------------------------------
+  HPY_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: HPY
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  LHY_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: LHY
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  LHR_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: LHR
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  LHP_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: LHP
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  LKP_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: LKP
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  LAP_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: LAP
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  LAR_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: LAR
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  RHY_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: RHY
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  RHR_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: RHR
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  RHP_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: RHP
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  RKP_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: RKP
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  RAP_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: RAP
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  RAR_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: RAR
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  LSP_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: LSP
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  LSR_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: LSR
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  LSY_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: LSY
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  LEP_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: LEP
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  LWY_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: LWY
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  LWP_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: LWP
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  RSP_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: RSP
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  RSR_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: RSR
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  RSY_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: RSY
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  REP_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: REP
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  RWY_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: RWY
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  RWP_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: RWP
+    pid: {p: 100.0, i: 0.01, d: 10.0}
