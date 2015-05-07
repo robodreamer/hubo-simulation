@@ -1841,6 +1841,340 @@
     </actuator>
   </transmission>
 
+	<!-- LEFT HAND FINGERS -->
+
+  <transmission name="leftThumbKnuckle1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="leftThumbKnuckle1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="leftThumbKnuckle1_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="Knuckle29_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Knuckle29">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Knuckle29_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="Knuckle310_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Knuckle310">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Knuckle310_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="leftPinkyKnuckle1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="leftPinkyKnuckle1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="leftPinkyKnuckle1_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="Knuckle212_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Knuckle212">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Knuckle212_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="Knuckle313_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Knuckle313">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Knuckle313_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="leftRingKnuckle1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="leftRingKnuckle1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="leftRingKnuckle1_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="Knuckle215_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Knuckle215">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Knuckle215_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="Knuckle316_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Knuckle316">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Knuckle316_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="leftMiddleKnuckle1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="leftMiddleKnuckle1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="leftMiddleKnuckle1_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="Knuckle218_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Knuckle218">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Knuckle218_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="Knuckle319_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Knuckle319">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Knuckle319_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="leftIndexKnuckle1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="leftIndexKnuckle1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="leftIndexKnuckle1_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="Knuckle221_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Knuckle221">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Knuckle221_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="Knuckle322_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Knuckle322">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Knuckle322_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <!-- RIGHT HAND FINGERS -->
+
+  <transmission name="rightThumbKnuckle1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="rightThumbKnuckle1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rightThumbKnuckle1_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="Knuckle230_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Knuckle230">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Knuckle230_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="Knuckle331_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Knuckle331">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Knuckle331_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="rightPinkyKnuckle1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="rightPinkyKnuckle1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rightPinkyKnuckle1_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="Knuckle233_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Knuckle233">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Knuckle233_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="Knuckle334_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Knuckle334">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Knuckle334_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="rightRingKnuckle1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="rightRingKnuckle1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rightRingKnuckle1_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="Knuckle236_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Knuckle236">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Knuckle236_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="Knuckle337_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Knuckle337">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Knuckle337_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="rightMiddleKnuckle1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="rightMiddleKnuckle1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rightMiddleKnuckle1_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="Knuckle239_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Knuckle239">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Knuckle239_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="Knuckle340_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Knuckle340">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Knuckle340_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="rightIndexKnuckle1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="rightIndexKnuckle1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rightIndexKnuckle1_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="Knuckle2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Knuckle2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Knuckle2_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="Knuckle3_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Knuckle3">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Knuckle3">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
 	<gazebo>
     <!-- robot model offset -->
     <pose>0 0 1 0 0 0</pose>

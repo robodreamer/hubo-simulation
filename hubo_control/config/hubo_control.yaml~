@@ -1,4 +1,4 @@
-hubo:
+hubo_gazebo:
   # Publish all joint states -----------------------------------
   joint_state_controller:
     type: joint_state_controller/JointStateController
@@ -8,100 +8,226 @@ hubo:
   HPY_position_controller:
     type: effort_controllers/JointPositionController
     joint: HPY
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 100.0, i: 60, d: 15.0}
   LHY_position_controller:
     type: effort_controllers/JointPositionController
     joint: LHY
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 100.0, i: 60, d: 15.0}
   LHR_position_controller:
     type: effort_controllers/JointPositionController
     joint: LHR
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 100.0, i: 60, d: 15.0}
   LHP_position_controller:
     type: effort_controllers/JointPositionController
     joint: LHP
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 100.0, i: 60, d: 15.0}
   LKP_position_controller:
     type: effort_controllers/JointPositionController
     joint: LKP
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 100.0, i: 60, d: 15.0}
   LAP_position_controller:
     type: effort_controllers/JointPositionController
     joint: LAP
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 100.0, i: 60, d: 15.0}
   LAR_position_controller:
     type: effort_controllers/JointPositionController
     joint: LAR
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 100.0, i: 60, d: 15.0}
+
   RHY_position_controller:
     type: effort_controllers/JointPositionController
     joint: RHY
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 100.0, i: 60, d: 15.0}
   RHR_position_controller:
     type: effort_controllers/JointPositionController
     joint: RHR
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 100.0, i: 60, d: 15.0}
   RHP_position_controller:
     type: effort_controllers/JointPositionController
     joint: RHP
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 100.0, i: 60, d: 15.0}
   RKP_position_controller:
     type: effort_controllers/JointPositionController
     joint: RKP
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 100.0, i: 60, d: 15.0}
   RAP_position_controller:
     type: effort_controllers/JointPositionController
     joint: RAP
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 100.0, i: 60, d: 15.0}
   RAR_position_controller:
     type: effort_controllers/JointPositionController
     joint: RAR
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 100.0, i: 60, d: 15.0}
+
   LSP_position_controller:
     type: effort_controllers/JointPositionController
     joint: LSP
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 200.0, i: 50, d: 5.0}
   LSR_position_controller:
     type: effort_controllers/JointPositionController
     joint: LSR
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 200.0, i: 50, d: 5.0}
   LSY_position_controller:
     type: effort_controllers/JointPositionController
     joint: LSY
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 200.0, i: 50, d: 5.0}
   LEP_position_controller:
     type: effort_controllers/JointPositionController
     joint: LEP
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 200.0, i: 50, d: 5.0}
   LWY_position_controller:
     type: effort_controllers/JointPositionController
     joint: LWY
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 200.0, i: 50, d: 5.0}
   LWP_position_controller:
     type: effort_controllers/JointPositionController
     joint: LWP
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 200.0, i: 50, d: 5.0}
+
   RSP_position_controller:
     type: effort_controllers/JointPositionController
     joint: RSP
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 200.0, i: 50, d: 5.0}
   RSR_position_controller:
     type: effort_controllers/JointPositionController
     joint: RSR
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 200.0, i: 50, d: 5.0}
   RSY_position_controller:
     type: effort_controllers/JointPositionController
     joint: RSY
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 200.0, i: 50, d: 5.0}
   REP_position_controller:
     type: effort_controllers/JointPositionController
     joint: REP
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 200.0, i: 50, d: 5.0}
   RWY_position_controller:
     type: effort_controllers/JointPositionController
     joint: RWY
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 200.0, i: 50, d: 5.0}
   RWP_position_controller:
     type: effort_controllers/JointPositionController
     joint: RWP
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 200.0, i: 50, d: 5.0}
+
+  # Fingers Position Controllers -------------------
+  leftThumbKnuckle1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: leftThumbKnuckle1
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  Knuckle29_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Knuckle29
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  Knuckle310_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Knuckle310
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  leftPinkyKnuckle1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: leftPinkyKnuckle1
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  Knuckle212_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Knuckle212
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  Knuckle313_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Knuckle313
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  leftRingKnuckle1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: leftRingKnuckle1
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  Knuckle215_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Knuckle215
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  Knuckle316_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Knuckle316
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  leftMiddleKnuckle1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: leftMiddleKnuckle1
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  Knuckle218_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Knuckle218
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  Knuckle319_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Knuckle319
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  leftIndexKnuckle1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: leftIndexKnuckle1
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  Knuckle221_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Knuckle221
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  Knuckle322_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Knuckle322
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+
+  rightThumbKnuckle1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rightThumbKnuckle1
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  Knuckle230_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Knuckle230
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  Knuckle331_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Knuckle331
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  rightPinkyKnuckle1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rightPinkyKnuckle1
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  Knuckle233_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Knuckle233
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  Knuckle334_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Knuckle334
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  rightRingKnuckle1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rightRingKnuckle1
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  Knuckle236_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Knuckle236
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  Knuckle337_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Knuckle337
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  rightMiddleKnuckle1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rightMiddleKnuckle1
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  Knuckle239_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Knuckle239
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  Knuckle340_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Knuckle340
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  rightIndexKnuckle1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rightIndexKnuckle1
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  Knuckle2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Knuckle2
+    pid: {p: 1.0, i: 0.2, d: 0.1}
+  Knuckle3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Knuckle3
+    pid: {p: 1.0, i: 0.2, d: 0.1}

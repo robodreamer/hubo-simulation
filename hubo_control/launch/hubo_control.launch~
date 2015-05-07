@@ -5,32 +5,63 @@
 
   <!-- load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-  output="screen" ns="/hubo_gazebo" args="joint_state_controller
-            HPY_position_controller
-            LHY_position_controller
-            LHR_position_controller
-            LHP_position_controller
-            LKP_position_controller
-            LAP_position_controller
-            LAR_position_controller
-            RHY_position_controller
-            RHR_position_controller
-            RHP_position_controller
-            RKP_position_controller
-            RAP_position_controller
-            RAR_position_controller
-            LSP_position_controller
-            LSR_position_controller
-            LSY_position_controller
-            LEP_position_controller
-            LWY_position_controller
-            LWP_position_controller
-            RSP_position_controller
-            RSR_position_controller
-            RSY_position_controller
-            REP_position_controller
-            RWY_position_controller
-            RWP_position_controller"/>
+  output="screen" ns="/hubo_gazebo" args="
+	HPY_position_controller 
+	LHY_position_controller
+	LHR_position_controller
+    LHP_position_controller
+    LKP_position_controller
+    LAP_position_controller
+    LAR_position_controller
+    RHY_position_controller
+    RHR_position_controller
+    RHP_position_controller
+    RKP_position_controller
+    RAP_position_controller
+    RAR_position_controller
+    LSP_position_controller
+    LSR_position_controller
+    LSY_position_controller
+    LEP_position_controller
+    LWY_position_controller
+    LWP_position_controller
+    RSP_position_controller
+    RSR_position_controller
+    RSY_position_controller
+    REP_position_controller
+    RWY_position_controller
+    RWP_position_controller
+    leftThumbKnuckle1_position_controller
+    Knuckle29_position_controller
+    Knuckle310_position_controller
+    leftPinkyKnuckle1_position_controller
+    Knuckle212_position_controller
+    Knuckle313_position_controller
+    leftRingKnuckle1_position_controller
+    Knuckle215_position_controller
+    Knuckle316_position_controller
+    leftMiddleKnuckle1_position_controller
+    Knuckle218_position_controller
+    Knuckle319_position_controller
+    leftIndexKnuckle1_position_controller
+    Knuckle221_position_controller
+    Knuckle322_position_controller
+    rightThumbKnuckle1_position_controller
+    Knuckle230_position_controller
+    Knuckle331_position_controller
+    rightPinkyKnuckle1_position_controller
+    Knuckle233_position_controller
+    Knuckle334_position_controller
+    rightRingKnuckle1_position_controller
+    Knuckle236_position_controller
+    Knuckle337_position_controller
+    rightMiddleKnuckle1_position_controller
+    Knuckle239_position_controller
+    Knuckle340_position_controller
+    rightIndexKnuckle1_position_controller
+    Knuckle2_position_controller
+    Knuckle3_position_controller
+    joint_state_controller"/>
 
   <!-- convert joint states to TF transforms for rviz, etc -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
